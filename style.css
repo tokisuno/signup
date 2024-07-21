@@ -5,7 +5,8 @@
 }
 
 :root {
-  --main-background-colours: #917bc7;
+  --main-background-colours: #282828;
+  --background-colour: #aaa;
   --input-border: #e5e7eb;
 }
 
@@ -13,7 +14,6 @@ body {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
-
 }
 
 /* || LEFT SIDE OF FORM */
@@ -26,21 +26,23 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .logo-and-text {
-  position: relative; 
-  bottom: 20%;
+  margin-top: 40px;
+  justify-content: center;
   display: flex;
   align-items: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
 }
 .sidebar > .logo-and-text > img {
   background-image: url("./odin-lined.png");
   background-position: 50% 20%;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 50%;
+  height: 280px;
+
 }
 .text {
   font-size: 4em;
@@ -64,8 +66,8 @@ body {
 /* .main > div { border: 1px solid red } */
 
 .quote { 
-  flex: 25%;
-  font-size: 2rem;
+  flex: 40%;
+  font-size: 1.75rem;
   flex-basis: 20%;
   font-family: sans;
   max-width: 45ch;
@@ -74,15 +76,83 @@ body {
   font-style: italic;
 }
 .quote > div {
-  padding-top: 10%;
+  padding-top: 100px;
   padding-left: 1em;
 }
+.form-body {
+  padding: 20px;
+  background-color: var(--background-colour);
+  flex: 30%;
+  box-shadow: 0px 100px 50px 10px black;
+
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  padding-left: 3rem;
+}
+.form-body > p {
+  font-size: 2em;
+}
+
+.fields {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 600px;
+  flex: 1;
+
+  font-family: monospace;
+  font-size: 1.2em; 
+  gap: 20px;
+}
+
+.fields > * {
+  margin: 1em 0;
+}
+
+.fields > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.fields > div > input {
+  height: 30px;
+  width: 275px;
+  font-size: 24px;
+  font-family: sans;
+}
+input:required:valid {
+  border: none;
+  outline: 2px solid #aea;
+}
+input:required:invalid {
+  border: none;
+  outline: 2px solid red;
+}
+.fields > div > input:focus {
+  border: none;
+  outline: 2px solid blue;
+  box-shadow: 0px 0px 10px 1px black;
+}
+
+
+
 .bottom {
-  flex: 25%;
+  flex: 20%;
   background-color: var(--main-background-colours);
 } 
-.form-body {
-  background-color: #cac;
-  flex: 50%;
-  box-shadow: 0px 100px 50px 10px black;
+.create-account-button > button {
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 280px;
+
+  font-size: 2em;
+  font-family: sans;
+}
+.create-account-button > button:hover {
+  background-color: grey;
+  border: 2px solid grey;
 }

@@ -18,14 +18,41 @@
         <div>You're pathetically predictable, you think your new book might include a trisyllabic meter and some ghetto Muppet creatures</div>
       </div>
       <div class="form-body">
-        <div class="signup"></div>
+        <h1>Sign up now!</h1>
         <!-- first name, last name, email, phone number, password, confirm password -->
         <div class="fields">
-
+          <div class="firstname">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" placeholder="john" required />
+          </div>
+          <div>
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" placeholder="deer" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="johndeer@aol.com" required />
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="289-289-2899" required />
+          </div>
+          <div>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" placeholder="secret :)" required />
+          </div>
+          <div>
+            <label for="pwd-confirm">Confirm Password</label>
+            <input type="password" id="pwd-confirm" required />
+          </div>
         </div>
       </div>
       <div class="bottom">
-        <div class="create-account"></div>
+        <div class="create-account">
+          <div class="create-account-button">
+            <button>Create account!</button>
+          </div>
+        </div>
         <div class="login"></div>
       </div>
     </div>
